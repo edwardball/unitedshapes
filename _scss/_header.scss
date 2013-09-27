@@ -1,0 +1,20 @@
+.logo {
+	margin-bottom: 60px;
+	padding-top: 5px;
+}
+.header{
+	border-bottom: 3px solid $background;
+	margin-bottom: 3%;
+}
+.logo img {
+	transition: opacity 0.7s;
+}
+.logo img:hover {
+	opacity:0.33;
+	transition-duration:0;
+}
+.header h2{
+	color:$bodyText;
+	font-size: 18px;
+	margin-bottom: 5px;
+}

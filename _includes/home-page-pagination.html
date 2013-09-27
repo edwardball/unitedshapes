@@ -1,0 +1,23 @@
+<div class="pagination">
+
+	{% if paginator.previous_page %}
+		{% if paginator.previous_page != 1%}
+			<!-- Adds the the link for all pages except the first page because... -->
+			<a href="/{{ paginator.previous_page }}" class="previous" title='Previous'>&#9668;</a>
+		{% else %}
+			<!-- ...the link for the home page is "/", not "/1" -->
+			<a href="/" class="previous" title='Previous'>&#9668;</a>
+		{% endif %}
+	{% else %}
+		<!-- We are on the first page so no 'previous' link needed. -->
+		<span class="previous" title='Previous'>&#9668;</span>
+	{% endif %}
+
+	{% if paginator.next_page %}
+		<a href="/{{ paginator.next_page }}" class="next" title='Next'>&#9658;</a>
+	{% else %}
+		<!-- No link needed for the last page -->
+		<span class="next" title='Next'>&#9658;</span>
+	{% endif %}
+	
+</div>

@@ -1,0 +1,56 @@
+body{
+	background: $background;
+	font: 16px/24px Helvetica, Arial, sans-serif;
+	color:$bodyText;
+}
+
+.wrapper {
+	margin: 0 auto;
+	background: white;
+	margin-top: 0;
+	max-width: 700px;
+	padding: 0 20px;
+}
+
+ul{
+	margin-left:20px;
+}
+
+p, p:visited,a{
+	text-align: left;
+	color: $bodyText;
+	transition: color 0.5s;
+}
+
+a:hover{
+	color: $hover;
+	transition: color 0s;
+}
+
+pre,code {
+	border: 1px solid darken($background,2%);
+	background: lighten($background,2%);
+	padding: 0 .4em;
+	font-size: 14px;
+}
+pre{
+	overflow-x:scroll;
+}
+code{
+	padding: 0 .2em;
+}
+pre code {
+	border: none;
+}
+
+.footer {
+	font-size: 13px;
+	border-top: 3px solid $background;
+	margin-top:40px;
+}
+.footer p{
+	padding: 10px 0;
+	margin:0;
+	text-align: right;
+	font-size: 14px;
+}

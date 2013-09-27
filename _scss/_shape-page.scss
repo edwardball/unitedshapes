@@ -1,0 +1,74 @@
+.svg-wrapper{
+	width:400px;
+	height:400px;
+	float: left;
+}
+
+.shape svg{
+	background: url('/images/graph-paper/graph-paper.png');
+	//We define these so that the graph paper has a nice even number of pixels,
+	//but still finishes with the illusion of a major gridline.
+	border-right: solid 1px $majorGridlines;
+	border-bottom: solid 1px $majorGridlines;
+}
+
+#my-gui-container{
+	margin-bottom: 40px;
+	float:right;
+}
+
+#codepen{
+	float: right;
+}
+
+.shape, .shape-static{
+	margin-bottom: 80px;
+}
+
+.shape-static p{
+	padding: 10px;
+	background: $background;
+	margin-bottom: 40px;
+	width:250px;
+	float:right;
+}
+
+.shape-static img{
+	margin-left: 40px;
+}
+
+
+/*for iphone*/
+@media (max-width: 481px) {
+	.svg-wrapper,
+	svg{
+		max-width:250px;
+		max-height:200px;
+	}
+}
+@media (max-height: 361px) and (orientation:portrait) {
+	.svg-wrapper,
+	svg{
+		width:250px;
+		max-height:300px;
+		height: 200px;
+
+	}
+
+	#my-gui-container{
+		float:left;
+		margin: 20px 0 40px;
+	}
+	.shape{
+		margin-bottom: 20px;
+	}
+}
+@media (max-height: 361px) and (orientation:landscape) {
+	.svg-wrapper,
+	svg{
+		max-width:150px;
+		max-height:300px;
+		height: 200px;
+
+	}
+}

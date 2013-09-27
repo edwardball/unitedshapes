@@ -1,0 +1,13 @@
+//Color Palette
+$background: #f2f2f2;
+$hover: darken($background,20%);
+$bodyText: #333;
+$majorGridlines: #ebebeb;
+
+@import "reset";
+@import "common";
+@import "header";
+@import "pagination";
+@import "home-page-grid";
+@import "shape-page";
+@import "syntax";

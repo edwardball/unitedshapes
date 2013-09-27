@@ -1,0 +1,7 @@
+name: UnitedShapes
+markdown: redcarpet
+pygments: true
+permalink: /:title/
+paginate: 6
+paginate_path: /:num/
+exclude: [README.md]

@@ -1,0 +1,26 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+    -webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape - otherwise text in landscape mobile is HUGE */
+}
+html, body{
+	height:100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%; 
+}
+
+h1{
+	margin-bottom: 1em;
+}
+p{
+	margin:1em 0;
+}
+
+.clear{
+  clear:both;
+}

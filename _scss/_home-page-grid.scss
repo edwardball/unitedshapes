@@ -1,0 +1,57 @@
+.posts {
+	list-style-type: none;
+	margin-bottom: 20px;
+	margin-left: 0px;
+}
+
+.posts li{
+	float:left;
+	/*3 of width & 2 of margin must equal 100% */
+	width:31%;
+	margin: 0 0 3.5% 3.5%;
+	/*Following needed for hovers*/
+	position: relative;
+}
+
+//Stops thumbnails on left having a margin-left
+.posts li:nth-child(3n-2){
+	margin-left: 0;
+}
+//Stops thumbnails on right having a margin-right
+.posts li:nth-child(3n){
+	margin-right: 0;
+}
+
+.posts img{
+	width: 100%;
+}
+.posts li a {
+	background: url('/images/graph-paper/graph-paper-small.png');
+}
+
+/***************************/
+//All of the below is for the direction aware hovers
+
+.posts li a {
+
+	overflow: hidden;
+}
+.posts li a,.posts li a img {
+	display: block;
+	position: relative;
+}
+.posts li a div {
+	position: absolute;
+	background: #333; /*Need this for browsers who don't support alpha*/
+	background: rgba(75,75,75,0.5);
+	width: 100%;
+	height: 100%;
+}
+.posts li a div span{
+	color:$background;
+	width:100%;
+	display: inline-block;
+	font-size: 20px;
+	padding: 8px 0 0 10px;
+	text-align: left;
+}
