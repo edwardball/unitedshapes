@@ -12,15 +12,15 @@
 	<!--<![endif]-->
 
 	{% include ie-shape-fallback.html %}
-	
+
 	{{ content }}
 
 </div>
 
 {% include post-page-pagination.html %}
 
-<script src='/javascript/post.js'></script>
-<script src='/javascript/shapes/{{page.name}}.js'></script>
+<script src='{{site.url}}/javascript/post.js'></script>
+<script src='{{site.url}}/javascript/shapes/{{page.name}}.js'></script>
 <script>
 	// $.getScript('/javascript/shapes/{{page.name}}.js', function(script){
 	// 	svg.initCodepenButton(script);

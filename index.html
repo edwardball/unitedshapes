@@ -9,8 +9,8 @@ title: A collection of shapes made with SVG.
 	{% for post in paginator.posts %}
 		<li>
 			<a href="{{ post.url }}">
-				<!--[if lte IE 8]>            <img class="thumbnail" src="/images/shapes/png/{{ post.name }}.png" alt=""><![endif]-->
-				<!--[if (gt IE 8)|!(IE)]><!--><img class="thumbnail" src="/images/shapes/{{ post.name }}.svg" alt=""><!--<![endif]-->
+				<!--[if lte IE 8]>            <img class="thumbnail" src="{{site.url}}/images/shapes/png/{{ post.name }}.png" alt=""><![endif]-->
+				<!--[if (gt IE 8)|!(IE)]><!--><img class="thumbnail" src="{{site.url}}/images/shapes/{{ post.name }}.svg" alt=""><!--<![endif]-->
 				<!-- Directional aware hover -->
 				<div><span>{{ post.title }}</span></div>
 			</a>
@@ -19,4 +19,4 @@ title: A collection of shapes made with SVG.
 	<div class="clear"></div>
 </ul>
 
-<script src='/javascript/home.js'></script>
+<script src='{{site.url}}/javascript/home.js'></script>
