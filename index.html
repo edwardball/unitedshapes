@@ -8,7 +8,7 @@ title: A collection of shapes made with SVG.
 	 and provide them with a PNG until the site stops supporting these versions some time in 2014 -->
 	{% for post in paginator.posts %}
 		<li>
-			<a href="{{ post.url }}">
+			<a href="{{site.url}}{{ post.url }}">
 				<!--[if lte IE 8]>            <img class="thumbnail" src="{{site.url}}/images/shapes/png/{{ post.name }}.png" alt=""><![endif]-->
 				<!--[if (gt IE 8)|!(IE)]><!--><img class="thumbnail" src="{{site.url}}/images/shapes/{{ post.name }}.svg" alt=""><!--<![endif]-->
 				<!-- Directional aware hover -->

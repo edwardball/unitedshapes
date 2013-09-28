@@ -5,4 +5,4 @@ permalink: /:title/
 paginate: 6
 paginate_path: /:num/
 exclude: [README.md]
-url: "http://aptary.github.io/unitedshapes"
+baseurl: "http://unitedshapes.com"
