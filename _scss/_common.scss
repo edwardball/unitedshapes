@@ -54,3 +54,6 @@ pre code {
 	text-align: right;
 	font-size: 14px;
 }
+svg{
+	overflow:hidden; //Overflow is visible in IE without this
+}
