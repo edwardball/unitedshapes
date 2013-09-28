@@ -21,7 +21,7 @@ SVG.prototype.initCodepenButton = function(script){
 	codepenJavascript += '\tthis.namespace = "http://www.w3.org/2000/svg";\n';
 	codepenJavascript += '\t//We set the width and height below.\n';
 	codepenJavascript += '\t//Firefox returns zero for element\'s Width & Height so that\'s why we check the parent node.\n';
-	codepenJavascript += '\tthis.width = this.element.clientWidth || this.element.parentNode.clientWidth;\n'; 
+	codepenJavascript += '\tthis.width = this.element.clientWidth || this.element.parentNode.clientWidth;\n';
 	codepenJavascript += '\tthis.height = this.element.clientHeight ||  this.element.parentNode.clientHeight\n';
 	codepenJavascript += '}\n\n';
 	codepenJavascript += 'var svg = new SVG();\n';
@@ -40,16 +40,13 @@ SVG.prototype.initCodepenButton = function(script){
 					// Need to replace quotes with HTML entities or else the JSON won't work properly
 					.replace(/"/g, "&quot;")
 					.replace(/'/g, "&apos;");
-	
-	var form = '<form id="codepen" action="http://codepen.io/pen/define" method="POST" target="_blank">' 
+
+	var form = '<form id="codepen" action="http://codepen.io/pen/define" method="POST" target="_blank">'
 				+ '<input type="hidden" name="data" value=\''
 				+ JSONstring
 				+ '\'>'
-				+ '<input type="submit" value="Edit on CodePen">' 
+				+ '<input type="submit" value="Edit on CodePen">'
 				+ '</form>';
 
 	$("#my-gui-container").after(form);
 }
-
-svg = new SVG();
-var gui = svg.addGUI();

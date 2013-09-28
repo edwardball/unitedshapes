@@ -20,11 +20,15 @@
 {% include post-page-pagination.html %}
 
 <script src='{{site.url}}/javascript/post.js'></script>
-<script src='{{site.url}}/javascript/shapes/{{page.name}}.js'></script>
+<!-- <script src='{{site.url}}/javascript/shapes/{{page.name}}.js'></script> -->
 <script>
-	// $.getScript('/javascript/shapes/{{page.name}}.js', function(script){
-	// 	svg.initCodepenButton(script);
-	// });
+$(function() {
+	svg = new SVG();
+	var gui = svg.addGUI();
+	$.getScript('/javascript/shapes/{{page.name}}.js', function(script){
+		// svg.initCodepenButton(script);
+	});
+});
 </script>
 
 {% include footer.html %}
