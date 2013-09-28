@@ -5,7 +5,7 @@
 }
 
 .shape svg{
-	background: url('/images/graph-paper/graph-paper.png');
+	background: url('#{$siteURL}/images/graph-paper/graph-paper.png');
 	//We define these so that the graph paper has a nice even number of pixels,
 	//but still finishes with the illusion of a major gridline.
 	border-right: solid 1px $majorGridlines;
