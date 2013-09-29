@@ -1,14 +1,15 @@
 .pagination, .pagination a{
-  text-align: center;
-  font-size: 30px;
-  color:darken($background,5%);
-  text-decoration: none;
-  transition: color 0.5s;
+	font-family: triangle-font, Arial, sans-serif;
+	text-align: center;
+	font-size: 60px;
+	color:darken($background,5%);
+	text-decoration: none;
+	transition: color 0.5s;
 }
 .pagination span{
-  color:$background;
+	color:$background;
 }
 .pagination a:hover{
-  color: $bodyText;
-  transition: color 0s;
+	color: $bodyText;
+	transition: color 0s;
 }
