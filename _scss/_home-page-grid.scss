@@ -13,15 +13,19 @@
 	/*Following needed for hovers*/
 	position: relative;
 }
+//Hack to avoid sub-pixel rounding issues causing floats to stack incorrectly :(
+.ieOld{
+	margin-left: 3%;
+}
 
 //Stops thumbnails on left having a margin-left
-// .posts li:nth-child(3n-2){
-// 	margin-left: 0;
-// }
-// //Stops thumbnails on right having a margin-right
-// .posts li:nth-child(3n){
-// 	margin-right: 0;
-// }
+.posts li:nth-child(3n-2){
+	margin-left: 0;
+}
+//Stops thumbnails on right having a margin-right
+.posts li:nth-child(3n){
+	margin-right: 0;
+}
 
 .posts img{
 	width: 100%;
