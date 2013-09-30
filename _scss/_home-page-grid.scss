@@ -14,7 +14,7 @@
 	position: relative;
 }
 //Hack to avoid sub-pixel rounding issues causing floats to stack incorrectly :(
-.ieOld{
+.ieOld .posts li{
 	margin-left: 3%;
 }
 
