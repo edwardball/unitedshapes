@@ -50,3 +50,14 @@ SVG.prototype.initCodepenButton = function(script){
 
 	$("#my-gui-container").after(form);
 }
+
+//Code below deals with Android V3 and below bug where overflow-x:scroll doesn't work
+var ua = navigator.userAgent;
+if( ua.indexOf("Android") >= 0 )
+{
+  var androidversion = parseFloat(ua.slice(ua.indexOf("Android")+8));
+  if (androidversion < 3.0)
+  {
+      $('pre').css("word-wrap","break-word");
+  }
+}
