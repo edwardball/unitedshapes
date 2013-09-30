@@ -222,6 +222,10 @@
 //Load PNG fallbacks for browsers without SVG support
 svgeezy.init(null, 'png');
 
+//jQuery nth child fallback.
+$(".posts li:nth-child(3n-2)").css("margin-left",0);
+$(".posts li:nth-child(3n)").css("margin-right",0);
+
 
 //The hover effects are a bit distracting on touch devices so we only initialise for non touch devices.
 if (!('ontouchstart' in window)){
