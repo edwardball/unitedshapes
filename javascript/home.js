@@ -1,3 +1,7 @@
+//Load PNG fallbacks for browsers without SVG support
+svgeezy.init(null, 'png');
+
+
 /**
  * jquery.hoverdir.js v1.1.0
  * http://www.codrops.com
@@ -225,6 +229,3 @@ if (!('ontouchstart' in window)){
 		$(' ul.posts li ').each( function() { $(this).hoverdir(); } ); //initialises the hover effects
 	});
 }
-
-//Load PNG fallbacks for browsers without SVG support
-svgeezy.init(null, 'png');
