@@ -23,7 +23,6 @@ var svgeezy = function() {
 				this.avoid = avoid || false;
 				this.filetype = filetype || 'png';
 				this.svgSupport = this.supportsSvg();
-				// if(!this.svgSupport) {
 				if(!this.svgSupport) {
 					this.images = document.getElementsByTagName('img');
 					this.imgL = this.images.length;
@@ -39,12 +38,9 @@ var svgeezy = function() {
 							continue;
 						}
 						if(this.getFileExt(src) == 'svg') {
-							svgPath = src.split('.')[0];
 							//Slightly amended by Aptary to allow PNGs to be in their own little folder
-							name = svgPath.split('/').pop()
-							// var newSrc = src.replace('.svg', '.' + this.filetype);
+							name = this.images[this.imgL].id;
 							var pngPath = "/images/shapes/png/" + name + ".png";
-							// this.images[this.imgL].setAttribute('src', newSrc);
 							this.images[this.imgL].setAttribute('src', pngPath);
 						}
 					}

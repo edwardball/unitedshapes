@@ -7,7 +7,7 @@ title: A collection of shapes made with SVG.
 	{% for post in paginator.posts %}
 		<li>
 			<a href="{{site.url}}{{ post.url }}">
-				<img class="thumbnail" src="{{site.url}}/images/shapes/{{ post.name }}.svg" alt="{{ post.title }}">
+				<img class="thumbnail" src="{{site.url}}/images/shapes/{{ post.name }}.svg" alt="{{ post.title }}" id="{{ post.name }}">
 				<!-- Directional aware hover -->
 				<div><span>{{ post.title }}</span></div>
 			</a>
