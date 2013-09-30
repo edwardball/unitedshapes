@@ -61,3 +61,21 @@ if( ua.indexOf("Android") >= 0 )
       $('pre').css("word-wrap","break-word");
   }
 }
+
+$(function() {
+	svg = new SVG();
+	var gui = svg.addGUI();
+	$.getScript('/javascript/shapes/'+shapeName+'.js', function(script){
+		// svg.initCodepenButton(script);
+	});
+});
+
+var staticShape = '<div class="shape-static">';
+staticShape += '<img src="/images/shapes/png/'+shapeName+'.png" alt="{{page.title}}">';
+staticShape += '<p class="lte_ie8">If you\'d like to play with an interactive SVG version of this shape, please upgrade your copy of Internet Explorer to <a href="http://www.microsoft.com/en-gb/download/internet-explorer.aspx" target="_blank">version 9 or above</a>, or try out <a href="https://www.google.com/intl/en/chrome/browser/" target="_blank">Chrome</a> or <a href="http://www.mozilla.org/en-US/firefox/new/" target="_blank">Firefox</a>.'
+staticShape += '</p><div class="clear"></div></div>';
+
+if (!svgeezy.supportsSvg()){
+    $(".shape").after(staticShape);
+    $(".shape").hide();
+}

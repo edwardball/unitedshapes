@@ -1,7 +1,7 @@
 {% include header.html %}
 
 <div class="post">
-	<!--[if (gt IE 8)|!(IE)]><!-->
+
 	<div class="shape">
 		<div class="svg-wrapper">
 			<svg height='400px' width='400px'></svg>
@@ -9,9 +9,6 @@
 		<div id="my-gui-container"></div>
 		<div class="clear"></div>
 	</div>
-	<!--<![endif]-->
-
-	{% include ie-shape-fallback.html %}
 
 	{{ content }}
 
@@ -19,16 +16,10 @@
 
 {% include post-page-pagination.html %}
 
+<script>
+	var shapeName = "{{page.name}}";
+</script>
 <script src='{{site.url}}/javascript/post.js'></script>
 <!-- <script src='{{site.url}}/javascript/shapes/{{page.name}}.js'></script> -->
-<script>
-$(function() {
-	svg = new SVG();
-	var gui = svg.addGUI();
-	$.getScript('/javascript/shapes/{{page.name}}.js', function(script){
-		// svg.initCodepenButton(script);
-	});
-});
-</script>
 
 {% include footer.html %}

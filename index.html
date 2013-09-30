@@ -4,13 +4,10 @@ title: A collection of shapes made with SVG.
 ---
 
 <ul class="posts">
-	<!-- Eek! Conditional comments? IE8 and earlier can't support SVG so we'll be kind
-	 and provide them with a PNG until the site stops supporting these versions some time in 2014 -->
 	{% for post in paginator.posts %}
 		<li>
 			<a href="{{site.url}}{{ post.url }}">
-				<!--[if lte IE 8]>            <img class="thumbnail" src="{{site.url}}/images/shapes/png/{{ post.name }}.png" alt=""><![endif]-->
-				<!--[if (gt IE 8)|!(IE)]><!--><img class="thumbnail" src="{{site.url}}/images/shapes/{{ post.name }}.svg" alt=""><!--<![endif]-->
+				<img class="thumbnail" src="{{site.url}}/images/shapes/{{ post.name }}.svg" alt="{{ post.title }}">
 				<!-- Directional aware hover -->
 				<div><span>{{ post.title }}</span></div>
 			</a>
