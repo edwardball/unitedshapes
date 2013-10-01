@@ -6,6 +6,8 @@
 	width:400px;
 	height:400px;
 	float: left;
+	margin-right:20px;
+	margin-bottom: 20px;
 }
 
 .shape svg{
@@ -26,7 +28,7 @@
 }
 
 .shape, .shape-static{
-	margin-bottom: 80px;
+	margin-bottom: 60px;
 }
 .post img{
 	background: url('#{$siteURL}/images/graph-paper/graph-paper-small.png');
@@ -41,6 +43,11 @@
 	margin-bottom: 40px;
 	width:250px;
 	float:right;
+}
+@media (max-width: 705px) {
+	#my-gui-container{
+		float:left;
+	}
 }
 
 /*for iphone*/
@@ -57,23 +64,14 @@
 		width:250px;
 		max-height:300px;
 		height: 200px;
-
-	}
-
-	#my-gui-container{
-		float:left;
-		margin: 20px 0 40px;
-	}
-	.shape{
-		margin-bottom: 20px;
 	}
 }
+
 @media (max-height: 361px) and (orientation:landscape) {
 	.svg-wrapper,
 	svg{
 		max-width:150px;
 		max-height:300px;
 		height: 200px;
-
 	}
 }
