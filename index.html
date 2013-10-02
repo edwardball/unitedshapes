@@ -15,4 +15,15 @@ title: A collection of shapes made with SVG.
 	{% endfor %}
 </ul>
 
+<!-- Show a little message when we reach the end -->
+{% if paginator.page == paginator.total_pages %}
+	<p>
+		Thanks for browsing&mdash;you've now reached the end.
+		If you liked what you saw and want to get involved, head
+		over to the <a href='https://github.com/Aptary/unitedshapes'>Github repo</a> to submit your own shapes.
+	</p>
+{% endif %}
+
+{% include home-page-pagination.html %}
+
 <script src='{{site.url}}/javascript/home.js'></script>
