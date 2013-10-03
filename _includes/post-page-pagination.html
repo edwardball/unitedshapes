@@ -1,14 +1,14 @@
 <div class="pagination">
 
 	{% if page.next %}
-		<a href="{{site.baseurl}}{{page.next.url}}" class="next" title='Next'>&#9668;</a>
+		<a href="{{site.baseurl}}{{page.next.url}}" class="next" title='Next shape: {{page.next.title}}'>&#9668;</a>
 	{% else %}
 		<!-- No link needed for the last page -->
 		<span class="next" title='You are on the most recent page'>&#9668;</span>
 	{% endif %}
 
 	{% if page.previous %}
-		<a href="{{site.baseurl}}{{page.previous.url}}" class="previous" title='Previous'>&#9658;</a>
+		<a href="{{site.baseurl}}{{page.previous.url}}" class="previous" title='Previous shape: {{page.previous.title}}'>&#9658;</a>
 	{% else %}
 		<span class="previous" title='You are on the last page'>&#9658;</span>
 	{% endif %}
