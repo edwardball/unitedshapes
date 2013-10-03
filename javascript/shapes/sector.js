@@ -38,10 +38,8 @@ Pacman.prototype.draw = function(){
 		"Z"
 	];
 
-
 	this.element.setAttribute("d", path.join(""));
 };
-
 
 var pacman = new Pacman();
 
