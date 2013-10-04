@@ -10,6 +10,8 @@ var Polygon = function() {
 	this.rotation = 0;
 	this.points = "";
 	this.element = null;
+	this.circle = null;
+	this.showCircle = true;
 	this.init();
 };
 
@@ -22,6 +24,14 @@ Polygon.prototype.draw = function() {
 		this.points += x + "," + y + " ";
 	};
 	this.element.setAttribute("points", this.points);
+
+	this.circle.setAttribute("cx",this.cx);
+	this.circle.setAttribute("cy",this.cy);
+	if (this.showCircle){
+		this.circle.setAttribute("r",this.r);
+	} else {
+		this.circle.setAttribute("r",0);
+	}
 };
 
 Polygon.prototype.init = function(){
@@ -30,6 +40,14 @@ Polygon.prototype.init = function(){
 	this.element.setAttribute("fill", this.fill);
 	this.element.setAttribute("stroke", this.stroke);
 	this.element.setAttribute("stroke-width", this.strokeWidth);
+
+	this.circle = document.createElementNS(svg.namespace,"circle");
+	svg.element.appendChild(this.circle);
+	this.circle.setAttribute("fill", this.fill);
+	this.circle.setAttribute("stroke", this.stroke);
+	this.circle.setAttribute("stroke-width", 1);
+	this.circle.setAttribute("stroke-dasharray","5,5");
+
 	this.draw();
 };
 
@@ -40,6 +58,7 @@ gui.add(polygon,'cy',0,svg.height);
 gui.add(polygon,'r',0,svg.height/2);
 gui.add(polygon,'n',3,20).step(1);
 gui.add(polygon,'rotation',0,359);
+gui.add(polygon,'showCircle');
 
 
 for (var i in gui.__controllers) {
