@@ -15,14 +15,14 @@ SVG.prototype.addGUI = function(){
 
 SVG.prototype.initCodepenButton = function(script){
 	var codepenHTML = "<svg width='400px' height='400px'></svg>";
-	var codepenCSS = "html,body{height:100%;}\nsvg{display:block;margin:0 auto;}";
+	var codepenCSS = "html,body{height:100%;}\nsvg{display:block;margin:0 auto;background: url('http://unitedshapes.com/images/graph-paper/graph-paper.png');}";
 	var codepenJavascript = 'var SVG = function(){\n';
 	codepenJavascript += '\tthis.element = document.getElementsByTagName("svg")[0];\n';
 	codepenJavascript += '\tthis.namespace = "http://www.w3.org/2000/svg";\n';
-	codepenJavascript += '\t//We set the width and height below.\n';
-	codepenJavascript += '\t//Firefox returns zero for element\'s Width & Height so that\'s why we check the parent node.\n';
-	codepenJavascript += '\tthis.width = this.element.clientWidth || this.element.parentNode.clientWidth;\n';
-	codepenJavascript += '\tthis.height = this.element.clientHeight ||  this.element.parentNode.clientHeight\n';
+	// codepenJavascript += '\t//We set the width and height below.\n';
+	// codepenJavascript += '\t//Firefox returns zero for element\'s Width & Height so that\'s why we check the parent node.\n';
+	codepenJavascript += '\tthis.width = 400;';
+	codepenJavascript += '\tthis.height = 400;';
 	codepenJavascript += '}\n\n';
 	codepenJavascript += 'var svg = new SVG();\n';
 	codepenJavascript += 'var gui = new dat.GUI();\n\n';
