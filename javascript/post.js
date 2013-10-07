@@ -14,8 +14,8 @@ SVG.prototype.addGUI = function(){
 }
 
 SVG.prototype.initCodepenButton = function(script){
-	var codepenHTML = "<svg width='100%' height='100%'></svg>";
-	var codepenCSS = "html,body{height:100%;}";
+	var codepenHTML = "<svg width='400px' height='400px'></svg>";
+	var codepenCSS = "html,body{height:100%;}\nsvg{display:block;margin:0 auto;}";
 	var codepenJavascript = 'var SVG = function(){\n';
 	codepenJavascript += '\tthis.element = document.getElementsByTagName("svg")[0];\n';
 	codepenJavascript += '\tthis.namespace = "http://www.w3.org/2000/svg";\n';
@@ -48,7 +48,7 @@ SVG.prototype.initCodepenButton = function(script){
 				+ '<input type="submit" value="Edit on CodePen">'
 				+ '</form>';
 
-	$("#my-gui-container").after(form);
+	$("#my-gui-container").append(form);
 }
 
 //Code below deals with Android V3 and below bug where overflow-x:scroll doesn't work
@@ -66,7 +66,7 @@ $(function() {
 	svg = new SVG();
 	var gui = svg.addGUI();
 	$.getScript('/javascript/shapes/'+shapeName+'.js', function(script){
-		// svg.initCodepenButton(script);
+		svg.initCodepenButton(script);
 	});
 });
 

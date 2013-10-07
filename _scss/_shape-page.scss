@@ -25,6 +25,7 @@
 
 #codepen{
 	float: right;
+	margin-top:40px;
 }
 
 .shape, .shape-static{
@@ -47,6 +48,9 @@
 @media (max-width: 705px) {
 	#my-gui-container{
 		float:left;
+	}
+	#codepen{
+		float: left;
 	}
 }
 
