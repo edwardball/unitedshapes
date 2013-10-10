@@ -15,16 +15,18 @@ SVG.prototype.addGUI = function(){
 
 SVG.prototype.initCodepenButton = function(script){
 	var codepenHTML = "<svg width='400px' height='400px'></svg>";
-	var codepenCSS = "html,body{height:100%;}\nsvg{display:block;margin:0 auto;background: url('http://unitedshapes.com/images/graph-paper/graph-paper.png');}";
+	var codepenCSS = "html,body{\n\theight:100%;\n}\nsvg{\n\tdisplay:block;\n\tmargin:0 auto;\n\tbackground: url('http://unitedshapes.com/images/graph-paper/graph-paper.png');\n}";
 	var codepenJavascript = 'var SVG = function(){\n';
 	codepenJavascript += '\tthis.element = document.getElementsByTagName("svg")[0];\n';
 	codepenJavascript += '\tthis.namespace = "http://www.w3.org/2000/svg";\n';
 	// codepenJavascript += '\t//We set the width and height below.\n';
 	// codepenJavascript += '\t//Firefox returns zero for element\'s Width & Height so that\'s why we check the parent node.\n';
 	codepenJavascript += '\tthis.width = 400;';
-	codepenJavascript += '\tthis.height = 400;';
-	codepenJavascript += '}\n\n';
-	codepenJavascript += 'var svg = new SVG();\n';
+	codepenJavascript += '\n\tthis.height = 400;';
+	codepenJavascript += '\n}\n\n';
+	codepenJavascript += '/****Let\'s initialise our SVG ready to draw our shape****/\n';
+	codepenJavascript += 'var svg = new SVG();\n\n';
+	codepenJavascript += '/****This sets up the user interface - we\'ve included the script for this as an external library for the codepen****/\n';
 	codepenJavascript += 'var gui = new dat.GUI();\n\n';
 	codepenJavascript += '/****Here\'s where the code to create the shape begins!****/\n';
 	var codepenExternalJavascript = "//cdnjs.cloudflare.com/ajax/libs/dat-gui/0.5/dat.gui.min.js";
